@@ -27,4 +27,14 @@
   </head>
 
   <textarea></textarea>
+
+  <script>
+    var txt = document.querySelector('textarea');
+
+    txt.value = localStorage.getItem('text') || '';
+
+    txt.addEventListener('keydown', function(e) {
+      localStorage.setItem('text', txt.value);
+    });
+  </script>
 </html>
